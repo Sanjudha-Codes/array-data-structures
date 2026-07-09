@@ -1,5 +1,5 @@
 First and Second Smallests
-Difficulty: EasyAccuracy: 24.44%Submissions: 183K+Points: 2
+
 Given an array, arr[] of integers, your task is to return the smallest and second smallest element in the array. If the smallest and second smallest do not exist, return -1.
 
 Examples:
