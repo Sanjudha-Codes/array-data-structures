@@ -1,0 +1,31 @@
+You are given an array arr[], the task is to return a list elements of arr in alternate order (starting from index 0).
+
+Examples:
+
+Input: arr[] = [1, 2, 3, 4]
+Output: 1 3
+Explanation:
+Take first element: 1
+Skip second element: 2
+Take third element: 3
+Skip fourth element: 4
+
+Solutions
+1. class Solution:
+    def getAlternates(self, arr):
+        res=[]
+        for i in range(len(arr)):
+            if i%2 == 0:
+                res.append(arr[i])
+        return res    
+
+2. class Solution:
+    def getAlternates(self, arr):
+        return arr[::2]
+
+3. class Solution:
+    def getAlternates(self, arr):
+        res = []
+        for i in range(0, len(arr), 2):
+            res.append(arr[i])
+        return res
