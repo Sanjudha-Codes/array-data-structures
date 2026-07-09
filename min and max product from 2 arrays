@@ -1,0 +1,25 @@
+Given two arrays of arr1 and arr2, the task is to calculate the product of the maximum element of the first array arr1, and minimum element of the second array arr2.
+
+Examples :
+
+Input : arr1[] = [5, 7, 9, 3, 6, 2],  arr2[] = [1, 2, 6, 1, 9]
+Output : 9
+Explanation: The max in arr1 is 9. The min element in arr2 is 1. The product is 9*1 = 9.
+
+solution:
+
+class Solution:
+    
+    def minMaxProduct(self, arr1, arr2):
+        large=0
+        for i in range(len(arr1)):
+            if arr1[i]>large:
+                large=arr1[i]
+    
+        
+        min=float('inf')
+        for i in range(len(arr2)):
+            if arr2[i]<min:
+                min=arr2[i]
+                
+        return large*min        
