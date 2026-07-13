@@ -1,0 +1,31 @@
+class Solution:
+    def thirdLargest(self,arr):
+        arr.sort()
+        if len(arr)<3:
+            return -1
+        else:
+            return arr[-3]
+
+Alternate solution:
+
+class Solution:
+    def thirdLargest(self,arr):
+        if len(arr)<3:
+            return -1
+        
+        lar=-1
+        seclar=-1
+        thirdlar=-1
+        
+        for num in arr:
+            if num >lar:
+                thirdlar=seclar
+                seclar=lar
+                lar=num
+            elif num>seclar:
+                thirdlar=seclar
+                seclar=num
+            elif num>thirdlar:
+                thirdlar=num
+                
+        return thirdlar        
