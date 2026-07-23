@@ -1,0 +1,27 @@
+class Solution(object):
+    def rotate(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: None Do not return anything, modify nums in-place instead.
+        """
+        n=len(nums)
+        k=k%n
+        num1=[]
+        
+        for j in range (n-k,n):
+            num1.append(nums[j])
+            
+        for j in range(0,n-k):
+            num1.append(nums[j])
+        for i in range(0,len(num1)):
+            nums[i]=num1[i]   
+
+
+class Solution(object):
+    def rotate(self, nums, k):
+        n = len(nums)
+        k = k % n  # k > n ah irundha handle panna
+        
+        # Last k elements + First (n-k) elements
+        nums[:] = nums[n-k:] + nums[:n-k]
