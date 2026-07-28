@@ -1,0 +1,19 @@
+class Solution:
+    def reverseString(self, s: str) -> str:
+        # code here
+        char_=list(s)
+        left,right=0,len(char_)-1
+        
+        while left<right:
+            char_[left],char_[right]=char_[right],char_[left]
+            left+=1
+            right-=1
+            
+        return "".join(char_)    
+
+alt soln:
+
+class Solution:
+    def reverseString(self, s: str) -> str:
+        
+        return s[::-1]
